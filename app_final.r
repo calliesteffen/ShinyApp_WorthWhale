@@ -13,6 +13,8 @@ library(png)
 library(IMAGE) 
 library(sf)
 
+# Wrangle Data
+
 
 #Read in vessel and whale data
 vessels <- read_csv("shiny_vessels.csv")
@@ -96,7 +98,7 @@ ui <- navbarPage("Navigation Bar",
                           verbatimTextOutput("summary")
                  ),
                  tabPanel("Meet the Whales",
-                          p("Sperm whales (Physeter macrocephaslus) are the largest toothed whales who are commonly found in depths of 1000m or deeper. The resident community of sperm whales found in the eastern caribbean are behaviorally distinct due to their vocalizations(clicks). Use the year inputs below to visualize sperm whale distrubution from 2012-2018.") ,
+                          p("Sperm whales (Physeter macrocephaslus) are the largest toothed whales who are commonly found in depths of 1000m or deeper. The resident community of sperm whales found in the eastern caribbean are behaviorally distinct due to their vocalizations (clicks). Use the year inputs below to visualize sperm whale distrubution from 2012-2018.") ,
                           leafletOutput(outputId = "whale_map", width="100%",height="800px"),
                           sidebarPanel(
                                        checkboxGroupInput(inputId = "year",
